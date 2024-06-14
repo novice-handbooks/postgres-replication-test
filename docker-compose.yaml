@@ -34,7 +34,7 @@ services:
       test: 'pg_isready -U user --dbname=postgres'
       interval: 10s
       timeout: 5s
-      retry: 5
+      retries: 5
     ports:
       - 5433:5432
     environment:
