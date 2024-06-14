@@ -39,7 +39,7 @@ services:
       - 5433:5432
     environment:
       PGUSER: replicator
-      PG_PASSWORD: replicator_password
+      PGPASSWORD: replicator_password
     command: |
       bash -c "
       until pg_basebackup --pgdata=/var/lib/postgresql/data -R --slot=replication_slot --host=pg_primary --port=5432
