@@ -48,7 +48,7 @@ services:
       sleep 1s
       done
       echo 'Backup done, starting replica...'
-      chmod 0700 /var/libpostgresql/data
+      chmod 0700 /var/lib/postgresql/data
       postgres
       "
     depends_on:
